@@ -1,0 +1,29 @@
+/** @format */
+
+.player {
+	background-color: #f1f3f4;
+	position: absolute;
+	bottom: 0;
+	height: 100px;
+	width: 100vw;
+
+	display: flex;
+	align-items: center;
+
+	overflow: hidden;
+}
+
+.songcover {
+	height: 100%;
+	width: 15%;
+	object-fit: cover;
+}
+
+.playerContainer {
+	width: 85%;
+	text-align: center;
+}
+
+.audioplayer {
+	width: 100%;
+}
