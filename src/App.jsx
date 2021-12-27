@@ -1,24 +1,40 @@
 /** @format */
 
-import { useState, useEffect } from "react";
-import { getSongs } from "./api/songs";
+import { useState, useEffect, useRef } from "react";
+import { getSongs, getSongsFromPlaylist } from "./api/songs";
 import "./App.css";
 
 import Player from "./components/Player/Player";
+import Playlist from "./components/Playlist/Playlist";
 
 function App() {
+	const [currentSong, setCurrentSong] = useState(null);
 	const [songs, setSongs] = useState(null);
 	const [isLoading, setIsLoading] = useState(true);
+	const audioRef = useRef();
 
 	useEffect(async () => {
-		const { data } = await getSongs(0, 100);
+		const { data } = await getSongsFromPlaylist(1);
 		setSongs(data.data);
+		setCurrentSong(data.data[0]);
 		setIsLoading(false);
 	}, []);
 
+	const changeTheSong = (song) => {
+		console.log(song);
+		setIsLoading(true);
+		setCurrentSong(song);
+		setIsLoading(false);
+	};
+
 	useEffect(() => {
-		console.log(songs);
-	}, [songs]);
+		if (audioRef.current) {
+			audioRef.current.pause();
+			audioRef.current.load();
+			audioRef.current.play();
+		}
+	}, [currentSong]);
+
 	if (isLoading) {
 		return (
 			<>
@@ -28,12 +44,14 @@ function App() {
 	}
 	return (
 		<div className="App">
+			<Playlist songs={songs} changeTheSong={changeTheSong} />
 			<Player
-				trackAuthor={songs[0].author.username}
-				trackName={songs[0].name}
-				audioLink={`https://docs.google.com/uc?export=download&id=${songs[0].url}`}
+				trackAuthor={currentSong.author.username}
+				trackName={currentSong.name}
 				audioType="audio/mpeg"
-				coverLink={`https://docs.google.com/uc?export=download&id=${songs[0].cover_url}`}
+				audioRef={audioRef}
+				audioLink={`https://docs.google.com/uc?export=download&id=${currentSong?.url}`}
+				coverLink={`https://docs.google.com/uc?export=download&id=${currentSong?.cover_url}`}
 			/>
 		</div>
 	);

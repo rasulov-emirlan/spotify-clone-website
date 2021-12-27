@@ -3,7 +3,14 @@
 import React from "react";
 import classes from "./Player.module.css";
 
-function Player({ trackAuthor, trackName, audioLink, audioType, coverLink }) {
+function Player({
+	trackAuthor,
+	trackName,
+	audioLink,
+	audioType,
+	coverLink,
+	audioRef,
+}) {
 	return (
 		<div className={classes.player}>
 			<img
@@ -13,7 +20,7 @@ function Player({ trackAuthor, trackName, audioLink, audioType, coverLink }) {
 			/>
 			<div className={classes.playerContainer}>
 				<h1>{trackAuthor + ": " + trackName}</h1>
-				<audio controls className={classes.audioplayer}>
+				<audio controls ref={audioRef} className={classes.audioplayer}>
 					<source src={audioLink} type={audioType} />
 				</audio>
 			</div>

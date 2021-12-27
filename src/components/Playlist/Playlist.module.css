@@ -1,0 +1,33 @@
+/** @format */
+
+.playlist {
+	width: 100%;
+	background-color: rgb(41, 41, 41);
+	color: white;
+}
+
+.song {
+	display: flex;
+	text-align: center;
+	align-items: center;
+
+	padding: 10px;
+	height: 100px;
+	transition: 1s;
+}
+
+.song:hover {
+	border: 3px solid yellow;
+}
+
+.song:hover .playButton {
+	visibility: visible;
+}
+
+.song .playButton {
+	width: 40px;
+	color: yellow;
+	visibility: hidden;
+	background: none;
+	border: none;
+}
