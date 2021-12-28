@@ -6,6 +6,39 @@
 	color: white;
 }
 
+.playlistHeader {
+	display: flex;
+	align-items: flex-end;
+	padding: 20px;
+}
+
+.playlistHeaderNames h2 {
+	font-size:xx-large;
+	padding: 20px;
+}
+.playlistHeaderNames {
+	width: 100%;
+}
+
+.playlistPlayButton {
+	outline: none;
+	background: none;
+	border: none;
+	border-radius: 50px;
+	background-color: yellow;
+	color: rgb(41, 41, 41);
+	width: 400px;
+	height: 100px;
+	margin: 20px;
+	display: flex;
+	font-size: 20;
+	align-items: center;
+}
+
+.playlistPlayButton:active {
+	background-color: rgb(184, 184, 0);
+	color: rgb(144, 144, 144);
+}
 .song {
 	display: flex;
 	text-align: center;

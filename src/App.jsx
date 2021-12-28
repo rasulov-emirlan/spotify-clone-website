@@ -13,6 +13,10 @@ function App() {
 	const [isLoading, setIsLoading] = useState(true);
 	const audioRef = useRef();
 
+	const playlist = {
+		name: "Chillls",
+		coverURL: "18DbcQwjL4i7ZbV7Wj2rVVeufsT_KIrBE"
+	}
 	useEffect(async () => {
 		const { data } = await getSongsFromPlaylist(1);
 		setSongs(data.data);
@@ -44,7 +48,10 @@ function App() {
 	}
 	return (
 		<div className="App">
-			<Playlist songs={songs} changeTheSong={changeTheSong} />
+			<Playlist
+			songs={songs}
+			playlist={playlist} 
+			changeTheSong={changeTheSong} />
 			<Player
 				trackAuthor={currentSong.author.username}
 				trackName={currentSong.name}

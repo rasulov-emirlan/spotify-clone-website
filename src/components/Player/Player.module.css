@@ -4,8 +4,9 @@
 	background-color: #f1f3f4;
 	position: absolute;
 	bottom: 0;
-	height: 100px;
-	width: 100vw;
+	left: 0;
+	right: 0;
+	height: 140px;
 
 	display: flex;
 	align-items: center;

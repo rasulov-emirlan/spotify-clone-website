@@ -11,7 +11,7 @@ const Song = ({ song, changeTheSong }) => {
 			<button className={classes.playButton}>
 				<PlayCircleIcon />
 			</button>
-			<h5>{song?.id}</h5> {song?.author?.username + " " + song?.name}
+			{song?.author?.username + " - " + song?.name}
 		</div>
 	);
 };
