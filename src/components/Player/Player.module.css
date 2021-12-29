@@ -1,7 +1,8 @@
 /** @format */
 
 .player {
-	background-color: #f1f3f4;
+	background-color: rgb(15, 15, 15);
+	color: white;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -12,6 +13,27 @@
 	align-items: center;
 
 	overflow: hidden;
+}
+
+.player audio {
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.timeline {
+	position: absolute;
+	bottom: 140px;
+	height: 10px;
+	left: 0;
+	right: 0;
+	background-color: rgb(177, 177, 177);
+}
+
+.yellowLine {
+	height: 10px;
+	width: 20%;
+	background-color: yellow;
 }
 
 .songcover {
@@ -27,4 +49,24 @@
 
 .audioplayer {
 	width: 100%;
+}
+
+.controls {
+	display: flex;
+	justify-content: center;
+}
+
+.playButton {
+	background: none;
+	border: none;
+	width: 40px;
+	height: 40px;
+	color: rgb(41, 41, 41);
+	background-color: yellow;
+	border-radius: 50%;
+	margin: 10px 40px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
