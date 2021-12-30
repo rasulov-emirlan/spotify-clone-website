@@ -47,7 +47,9 @@ function Player({
 		if (newtime <= audio.current.duration && newtime > 0) {
 			audio.current.pause();
 			audio.current.currentTime = newtime;
-			audio.current.play();
+			if (isPlaying) {
+				audio.current.play();
+			}
 		}
 	};
 
