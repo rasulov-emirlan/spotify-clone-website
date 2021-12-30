@@ -11,6 +11,10 @@ const Song = ({ song, changeTheSong }) => {
 			<button className={classes.playButton}>
 				<PlayCircleIcon />
 			</button>
+			<img
+				src={`https://docs.google.com/uc?export=download&id=${song?.cover_url}`}
+				alt="cover-url"
+			/>
 			{song?.author?.username + " - " + song?.name}
 		</div>
 	);

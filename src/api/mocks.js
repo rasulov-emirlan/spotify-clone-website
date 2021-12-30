@@ -17,6 +17,32 @@ export const playlists = {
 			is_album: false,
 			cover_url: "1D1wM39TET_uL-uTOrx4B4wvVar6-98vb",
 		},
+		{
+			id: 2,
+			name: "Rock IT!",
+			author: {
+				id: 1,
+				username: "Johnny",
+				name: "",
+				birth_date: "",
+				roles: null,
+			},
+			is_album: false,
+			cover_url: "18DbcQwjL4i7ZbV7Wj2rVVeufsT_KIrBE",
+		},
+		{
+			id: 3,
+			name: "HEYAHEYA",
+			author: {
+				id: 1,
+				username: "Johnny",
+				name: "",
+				birth_date: "",
+				roles: null,
+			},
+			is_album: false,
+			cover_url: "1zjxPrxoZdxhPCsn-gCs1nQ9wV8N17mj-",
+		},
 	],
 };
 

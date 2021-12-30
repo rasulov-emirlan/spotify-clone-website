@@ -13,7 +13,7 @@
 }
 
 .playlistHeaderNames h2 {
-	font-size:xx-large;
+	font-size: xx-large;
 	padding: 20px;
 }
 .playlistHeaderNames {
@@ -39,6 +39,7 @@
 	background-color: rgb(184, 184, 0);
 	color: rgb(144, 144, 144);
 }
+
 .song {
 	display: flex;
 	text-align: center;
@@ -47,6 +48,13 @@
 	padding: 10px;
 	height: 100px;
 	transition: 1s;
+}
+
+.song img {
+	height: 100%;
+	width: 100px;
+	object-fit: cover;
+	margin: 0 10px;
 }
 
 .song:hover {
