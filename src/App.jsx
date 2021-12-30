@@ -22,12 +22,10 @@ function App() {
 		coverURL: "18DbcQwjL4i7ZbV7Wj2rVVeufsT_KIrBE",
 	};
 	useEffect(async () => {
-		const { data } = await getSongsFromPlaylist(1);
-		console.log(data);
+		const { data } = getSongsFromPlaylist(1);
 		setSongs(data);
 		setCurrentSong(data[0]);
 		setIsLoading(false);
-		console.log(data);
 	}, []);
 
 	const changeTheSong = (song) => {

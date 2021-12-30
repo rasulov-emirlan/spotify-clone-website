@@ -1,6 +1,6 @@
 /** @format */
 
-const playlists = {
+export const playlists = {
 	code: 200,
 	message: "",
 	data: [
@@ -20,7 +20,7 @@ const playlists = {
 	],
 };
 
-const playlist1 = {
+export const playlist1 = {
 	code: 200,
 	message: "",
 	data: [

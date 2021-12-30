@@ -1,16 +1,10 @@
 /** @format */
 
 import {
-	ArrowBack,
-	ArrowBackIos,
-	ArrowBackIosOutlined,
-	ArrowBackOutlined,
 	ArrowCircleLeftOutlined,
-	ArrowCircleRightOutlined,
-	ArrowForwardIos,
-	ArrowForwardIosOutlined,
-	PlayCircleOutline,
-	PlayCircleOutlineRounded,
+	ArrowCircleLeftRounded,
+	ArrowCircleRightRounded,
+	PlayCircleFilledRounded,
 } from "@mui/icons-material";
 import React, { useState, useEffect, useRef } from "react";
 import classes from "./Player.module.css";
@@ -92,7 +86,7 @@ function Player({
 					<h1>{trackAuthor + ": " + trackName}</h1>
 					<div className={classes.controls}>
 						<button className={classes.playButton}>
-							<ArrowBackIosOutlined
+							<ArrowCircleLeftRounded
 								style={{
 									height: "100%",
 									width: "100%",
@@ -102,7 +96,7 @@ function Player({
 						<button
 							className={classes.playButton}
 							onClick={() => buttonPlay(audioRef)}>
-							<PlayCircleOutlineRounded
+							<PlayCircleFilledRounded
 								style={{
 									height: "100%",
 									width: "100%",
@@ -110,7 +104,7 @@ function Player({
 							/>
 						</button>
 						<button className={classes.playButton}>
-							<ArrowForwardIosOutlined
+							<ArrowCircleRightRounded
 								style={{
 									height: "100%",
 									width: "100%",
