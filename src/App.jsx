@@ -35,6 +35,10 @@ function App() {
 		setIsLoading(false);
 	};
 
+	const changeSongNext = () => {};
+
+	const changeSongBack = () => {};
+
 	useEffect(() => {
 		if (audioRef.current) {
 			audioRef.current.pause();

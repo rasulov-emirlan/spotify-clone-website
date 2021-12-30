@@ -4,6 +4,7 @@ import {
 	ArrowCircleLeftOutlined,
 	ArrowCircleLeftRounded,
 	ArrowCircleRightRounded,
+	PauseCircleFilledRounded,
 	PlayCircleFilledRounded,
 } from "@mui/icons-material";
 import React, { useState, useEffect, useRef } from "react";
@@ -55,6 +56,9 @@ function Player({
 			audioRef.current.addEventListener("timeupdate", (e) => {
 				setCurrentPlayingTime(e.target.currentTime);
 			});
+			audioRef.current.addEventListener("ended", (e) => {
+				setIsPlaying(false);
+			});
 		}
 	}, []);
 
@@ -96,12 +100,21 @@ function Player({
 						<button
 							className={classes.playButton}
 							onClick={() => buttonPlay(audioRef)}>
-							<PlayCircleFilledRounded
-								style={{
-									height: "100%",
-									width: "100%",
-								}}
-							/>
+							{isPlaying ? (
+								<PauseCircleFilledRounded
+									style={{
+										height: "100%",
+										width: "100%",
+									}}
+								/>
+							) : (
+								<PlayCircleFilledRounded
+									style={{
+										height: "100%",
+										width: "100%",
+									}}
+								/>
+							)}
 						</button>
 						<button className={classes.playButton}>
 							<ArrowCircleRightRounded
