@@ -23,9 +23,11 @@ function App() {
 	};
 	useEffect(async () => {
 		const { data } = await getSongsFromPlaylist(1);
-		setSongs(data.data);
-		setCurrentSong(data.data[0]);
+		console.log(data);
+		setSongs(data);
+		setCurrentSong(data[0]);
 		setIsLoading(false);
+		console.log(data);
 	}, []);
 
 	const changeTheSong = (song) => {
