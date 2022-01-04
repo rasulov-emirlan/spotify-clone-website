@@ -1,0 +1,142 @@
+body{
+    background-color: rgb(88, 88, 87);
+    min-width: 500px;
+    min-height: 500px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.testCube
+{
+    
+    /* draw some prikol */
+    background-color: black;
+    width: 250px;
+    height: 40%;
+
+    color: orange;
+
+    white-space: nowrap;
+    position: absolute;
+}
+
+.toolBar
+{
+    flex-direction: column;
+    color: gray;
+    margin-left: 10px;
+}
+
+.playlistManager
+{
+    position: absolute;
+    bottom: 8px;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+#govnoLine
+{
+    width: 90%;
+    size: 3px;
+    color: white;
+    align-items: bottom;
+    position: absolute;
+    left: 5%;
+    bottom: 3px;
+}
+
+
+.library
+{
+    background-color: black;
+    color: white;
+    height: 60%;
+    width: 250px;
+
+    position: absolute;
+    bottom: 0px;
+}
+
+.library > p 
+{
+    position: relative;
+    top: 3px;
+    left: 10px;
+
+    color: gray;
+}
+
+.frienList
+{
+    background-color: black;
+    position: absolute;
+    right: 0px;
+    width: 250px;
+    height: 100%;
+}
+
+.frienList > p
+{
+    color: gray;
+    position: relative;
+    margin-left: 10px;  
+}
+
+.friendMenu
+{
+    color: gray;
+    border: 3px double white;
+    padding: 1px;
+    margin: 10px;
+    text-align: center;
+}
+
+.player
+{
+    position: absolute;
+    background-color: rgb(44, 44, 44);
+    bottom: 0px;
+    width: 100%;
+    flex-direction: row;
+}
+
+.track
+{
+    color: gray;
+    flex-direction: column;
+}
+
+.track > p, h1
+{
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+} 
+
+.toolbar1
+{
+    position: absolute;
+    white-space: nowrap;
+    top: 0px;
+    right: 70%;
+    left: 30%;
+    width: 300px;
+    text-align: center;
+    background-color: white;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.toolbar2
+{
+    position: absolute;
+    right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    top: 0px;
+    /* height: 100%; */
+    text-align: center;
+    background-color: orange;
+}
