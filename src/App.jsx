@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useRef } from "react";
 import { getSongs, getSongsFromPlaylist } from "./api/songs";
-import "./App.css";
+// import "./App.css";
+import "./rastaman/jopaKlay.css"
 
 import Player from "./components/Player/Player";
 import Playlist from "./components/Playlist/Playlist";
@@ -35,9 +36,9 @@ function App() {
 		setIsLoading(false);
 	};
 
-	const changeSongNext = () => {};
+	const changeSongNext = () => { };
 
-	const changeSongBack = () => {};
+	const changeSongBack = () => { };
 
 	useEffect(() => {
 		if (audioRef.current) {
@@ -58,7 +59,7 @@ function App() {
 	}
 	return (
 		<div className="App">
-			<Playlist
+			{/* <Playlist
 				songs={songs}
 				playlist={playlist}
 				changeTheSong={changeTheSong}
@@ -74,7 +75,50 @@ function App() {
 				setIsPlaying={setIsPlaying}
 				currentPlayingTime={currentTime}
 				setCurrentPlayingTime={setCurrentTime}
-			/>
+			/> */}
+
+			<div className="testCube">
+				<div className="toolBar">
+					<p> Главная </p>
+					<p> Поиск </p>
+					<p> Моя Медиатека </p>
+				</div>
+				<div className="playlistManager">
+					<p> Создать плейлист </p>
+					<p> Любимые треки </p>
+				</div>
+
+				<hr id="govnoLine"/>
+			</div>
+
+			<div className="library"> 
+				<p>Плейлист 1</p> 
+				<p>Плейлист 2</p> 
+				<p>Плейлист 2</p> 
+			</div>
+
+			<div className="frienList">
+				<div className="friendMenu">
+					<p>Добавить друга</p>
+				</div>
+				<p>Дядя Федя</p>
+			</div>
+			
+			<div className="player"> 
+
+				<div className="track">
+					<h1>Name</h1>
+					<p>Author</p>
+				</div> 
+
+				<div className="toolbar1">
+					<p>Tipa music igraet</p>
+				</div>
+
+				<div className="toolbar2">
+					<p>like ne like</p>
+				</div>
+			</div>
 		</div>
 	);
 }
